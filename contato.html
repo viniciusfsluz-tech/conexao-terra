@@ -1,20 +1,32 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Página de contato demonstrativa do projeto escolar Conexão Terra, desenvolvido por alunos do IFSP Campus Cubatão.">
+  <meta name="description" content="Entre em contato com o projeto Conexão Terra e conheça a localização do IFSP Campus Cubatão.">
+
   <title>Contato | Conexão Terra</title>
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
+
 <body>
-  <header class="site-header">
+  <header class="site-header" id="topo">
     <a class="logo" href="index.html">
       <span class="logo-mark">◈</span>
       <span>CONEXÃO <strong>TERRA</strong></span>
     </a>
-    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal" type="button">☰</button>
+
+    <button
+      class="menu-toggle"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+      type="button"
+    >☰</button>
+
     <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
       <a href="index.html">Início</a>
       <a href="conteudos.html">Explorar temas</a>
@@ -25,39 +37,92 @@
   </header>
 
   <main>
+    <!-- APRESENTAÇÃO -->
     <section class="page-hero contact-hero">
       <p class="eyebrow"><span></span> CONEXÃO TERRA · CONTATO</p>
+
       <h1>Vamos <em>conversar?</em></h1>
-      <p>Este espaço apresenta uma demonstração de formulário para comentários, dúvidas e sugestões sobre os temas do projeto.</p>
+
+      <p>
+        Este espaço apresenta uma demonstração de formulário
+        para comentários, dúvidas e sugestões sobre os temas
+        do projeto.
+      </p>
     </section>
 
+    <!-- FORMULÁRIO E AVISO -->
     <section class="contact-layout section-wrap">
+
       <aside class="contact-notice notice">
         <p class="eyebrow">ANTES DE COMEÇAR</p>
+
         <h2>Este formulário é apenas uma demonstração.</h2>
-        <p><strong>Nenhuma mensagem será enviada, recebida ou armazenada.</strong> O formulário não está conectado a e-mail, servidor ou serviço de mensagens. Ao clicar no botão, você verá somente uma confirmação nesta página.</p>
+
+        <p>
+          <strong>Nenhuma mensagem será enviada, recebida ou armazenada.</strong>
+          O formulário não está conectado a e-mail, servidor ou serviço
+          de mensagens. Ao clicar no botão, você verá somente uma
+          confirmação nesta página.
+        </p>
+
         <p>Não informe dados pessoais ou confidenciais.</p>
       </aside>
 
       <section class="contact-panel" aria-labelledby="contact-title">
+
         <div class="contact-heading">
           <p class="eyebrow">FORMULÁRIO DEMONSTRATIVO</p>
+
           <h2 id="contact-title">Escreva sua mensagem</h2>
-          <p>Preencha os campos para experimentar a interface. Os dados não serão transmitidos nem salvos.</p>
+
+          <p>
+            Preencha os campos para experimentar a interface.
+            Os dados não serão transmitidos nem salvos.
+          </p>
         </div>
 
         <form id="contact-form">
+
           <div class="form-group">
-            <label for="nome">Nome <span>(obrigatório)</span></label>
-            <input type="text" id="nome" name="nome" placeholder="Como podemos chamar você?" autocomplete="off" required>
+            <label for="nome">
+              Nome <span>(obrigatório)</span>
+            </label>
+
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Como podemos chamar você?"
+              autocomplete="off"
+              maxlength="80"
+              required
+            >
           </div>
+
           <div class="form-group">
-            <label for="email">E-mail <span>(opcional)</span></label>
-            <input type="email" id="email" name="email" placeholder="exemplo@email.com" autocomplete="off">
-            <small>O endereço preenchido não será utilizado nem enviado.</small>
+            <label for="email">
+              E-mail <span>(opcional)</span>
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@email.com"
+              autocomplete="off"
+              maxlength="120"
+            >
+
+            <small>
+              O endereço preenchido não será utilizado nem enviado.
+            </small>
           </div>
+
           <div class="form-group">
-            <label for="assunto">Assunto <span>(obrigatório)</span></label>
+            <label for="assunto">
+              Assunto <span>(obrigatório)</span>
+            </label>
+
             <select id="assunto" name="assunto" required>
               <option value="">Selecione um assunto</option>
               <option value="duvida">Dúvida sobre o conteúdo</option>
@@ -68,40 +133,182 @@
               <option value="outro">Outro assunto</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label for="mensagem">Mensagem <span>(obrigatório)</span></label>
-            <textarea id="mensagem" name="mensagem" rows="7" placeholder="Escreva aqui sua dúvida, opinião ou sugestão..." required></textarea>
+            <label for="mensagem">
+              Mensagem <span>(obrigatório)</span>
+            </label>
+
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="7"
+              maxlength="1000"
+              placeholder="Escreva aqui sua dúvida, opinião ou sugestão..."
+              required
+            ></textarea>
           </div>
-          <button type="submit" class="button button-primary">Testar formulário <span aria-hidden="true">↗</span></button>
-          <p class="form-disclaimer">Atenção: o botão não envia a mensagem. Esta é uma simulação acadêmica, sem transmissão ou armazenamento de dados.</p>
+
+          <button type="submit" class="button button-primary">
+            Testar formulário <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="form-disclaimer">
+            Atenção: o botão não envia a mensagem. Esta é uma
+            simulação acadêmica, sem transmissão ou armazenamento de dados.
+          </p>
         </form>
 
-        <div id="contact-feedback" class="contact-feedback notice" role="status" aria-live="polite" hidden>
+        <div
+          id="contact-feedback"
+          class="contact-feedback notice"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
           <p class="eyebrow">SIMULAÇÃO CONCLUÍDA</p>
+
           <h2>Nenhuma mensagem foi enviada.</h2>
-          <p>Esta página é apenas uma demonstração. O conteúdo digitado não foi enviado, recebido nem armazenado por ninguém.</p>
-          <button type="button" id="contact-reset" class="button button-outline">Preencher novamente</button>
+
+          <p>
+            Esta página é apenas uma demonstração. O conteúdo
+            digitado não foi enviado, recebido nem armazenado por ninguém.
+          </p>
+
+          <button
+            type="button"
+            id="contact-reset"
+            class="button button-outline"
+          >
+            Preencher novamente
+          </button>
         </div>
       </section>
     </section>
 
+    <!-- INFORMAÇÕES ACADÊMICAS -->
     <section class="academic-section">
       <div class="section-wrap academic-content">
+
         <p class="eyebrow"><span></span> SOBRE O PROJETO</p>
-        <h2>Um trabalho escolar <em>interdisciplinar.</em></h2>
-        <p>O <strong>Conexão Terra</strong> é um trabalho escolar desenvolvido por alunos do <strong>Instituto Federal de São Paulo (IFSP) — Campus Cubatão</strong>, com finalidade educativa e acadêmica.</p>
-        <p>O site surgiu da integração entre a disciplina de <strong>Geografia</strong>, ministrada pelo professor <strong>Augusto</strong>, e a disciplina técnica de <strong>Práticas de Laboratório</strong>, ministrada pelo professor <strong>Nelson</strong>.</p>
-        <p>A proposta é relacionar conhecimentos geográficos e técnicos para investigar as conexões entre tecnologia, sociedade e meio ambiente, com atenção especial aos data centers e aos impactos de sua infraestrutura.</p>
-        <p class="academic-disclaimer">Este site é um trabalho acadêmico e não representa necessariamente o posicionamento oficial do Instituto Federal ou dos professores envolvidos.</p>
+
+        <h2>
+          Um trabalho escolar <em>interdisciplinar.</em>
+        </h2>
+
+        <p>
+          O <strong>Conexão Terra</strong> é um trabalho escolar
+          desenvolvido por alunos do
+          <strong>Instituto Federal de São Paulo (IFSP) — Campus Cubatão</strong>,
+          com finalidade educativa e acadêmica.
+        </p>
+
+        <p>
+          O site surgiu da integração entre a disciplina de
+          <strong>Geografia</strong>, ministrada pelo professor
+          <strong>Augusto</strong>, e a disciplina técnica de
+          <strong>Práticas de Laboratório</strong>, ministrada pelo
+          professor <strong>Nelson</strong>.
+        </p>
+
+        <p>
+          A proposta é relacionar conhecimentos geográficos e
+          técnicos para investigar as conexões entre tecnologia,
+          sociedade e meio ambiente, com atenção especial aos
+          data centers e aos impactos de sua infraestrutura.
+        </p>
+
+        <p class="academic-disclaimer">
+          Este site é um trabalho acadêmico e não representa
+          necessariamente o posicionamento oficial do Instituto
+          Federal ou dos professores envolvidos.
+        </p>
       </div>
     </section>
+
+    <!-- LOCALIZAÇÃO DA INSTITUIÇÃO -->
+    <section class="location-section">
+      <div class="section-wrap">
+
+        <div class="location-heading">
+          <p class="eyebrow"><span></span> ONDE O PROJETO FOI DESENVOLVIDO</p>
+
+          <h2>
+            Nossa instituição <em>de ensino.</em>
+          </h2>
+
+          <p>
+            O Conexão Terra foi desenvolvido por estudantes do
+            Instituto Federal de São Paulo — Campus Cubatão.
+            Confira a localização da instituição no mapa.
+          </p>
+        </div>
+
+        <div class="location-card">
+
+          <div class="location-information">
+            <p class="eyebrow">INSTITUIÇÃO DE ENSINO</p>
+
+            <h3>IFSP — Campus Cubatão</h3>
+
+            <p>
+              Rua Maria Cristina, 50 — Jardim Casqueiro,
+              Cubatão — SP, CEP 11533-160.
+            </p>
+
+            <p class="location-detail">
+              Técnico em Informática Integrado ao Ensino Médio
+            </p>
+
+            <a
+              class="button button-primary"
+              href="https://www.google.com/maps/search/?api=1&query=Instituto+Federal+de+S%C3%A3o+Paulo+Campus+Cubat%C3%A3o"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir no Google Maps
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps?q=IFSP%20Campus%20Cubat%C3%A3o%2C%20Cubat%C3%A3o%2C%20SP&output=embed"
+              title="Mapa de localização do IFSP Campus Cubatão"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <a
+    class="back-to-top"
+    href="#topo"
+    aria-label="Voltar ao início"
+  >↑</a>
+
   <footer class="site-footer">
-    <a class="logo footer-logo" href="index.html"><span class="logo-mark">◈</span><span>CONEXÃO <strong>TERRA</strong></span></a>
+    <a class="logo footer-logo" href="index.html">
+      <span class="logo-mark">◈</span>
+      <span>CONEXÃO <strong>TERRA</strong></span>
+    </a>
+
     <p>Projeto escolar interdisciplinar · IFSP Campus Cubatão</p>
-    <p>Geografia — Prof. Augusto · Práticas de Laboratório — Prof. Nelson</p>
-    <span class="footer-end">TECNOLOGIA, TERRITÓRIO E MEIO AMBIENTE</span>
+
+    <p>
+      Geografia — Prof. Augusto ·
+      Práticas de Laboratório — Prof. Nelson
+    </p>
+
+    <span class="footer-end">
+      TECNOLOGIA, TERRITÓRIO E MEIO AMBIENTE
+    </span>
   </footer>
 
   <script>
@@ -111,17 +318,27 @@
 
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
+
       contactForm.reset();
       contactForm.hidden = true;
       contactFeedback.hidden = false;
-      contactFeedback.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      contactFeedback.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
     });
 
     contactReset.addEventListener("click", () => {
       contactFeedback.hidden = true;
       contactForm.hidden = false;
       contactForm.reset();
-      contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      contactForm.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
       document.getElementById("nome").focus();
     });
   </script>
