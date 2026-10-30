@@ -13,6 +13,7 @@ PÁGINAS
 - conteudos.html: infraestrutura digital, impactos, conservação, política ambiental e seção de fontes de pesquisa
 - trabalhos.html: estudo de caso sobre data centers e espaços para trabalhos futuros
 - sobre.html: objetivo interdisciplinar e identificação escolar
+- contato.html: forma visual de forma de se comunicar
 - css/style.css: identidade visual, animações, responsividade e efeitos de interação
 - js/script.js: menu móvel e animações de entrada acessíveis
 
