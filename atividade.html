@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Atividade interativa sobre o consumo de energia dos data centers."
+    >
+
+    <title>Atividade Interativa | Conexão Terra</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/atividade.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">◈</span>
+            Conexão <strong>Terra</strong>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="site-nav" id="nav">
+            <a href="index.html">Início</a>
+            <a href="conteudos.html">Conteúdos</a>
+            <a href="trabalhos.html">Trabalhos</a>
+            <a href="atividade.html" class="active">Atividade</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="page-hero">
+
+            <div class="section-wrap">
+
+                <p class="eyebrow">APRENDA NA PRÁTICA</p>
+
+                <h1>
+                    O impacto ambiental
+                    <span>dos data centers</span>
+                </h1>
+
+                <p>
+                    Você sabe quanta energia é necessária para manter
+                    os serviços digitais funcionando? Explore o simulador
+                    e descubra como o crescimento da infraestrutura digital
+                    pode afetar o meio ambiente.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUÇÃO -->
+        <section class="content-section">
+
+            <div class="section-wrap">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">ENTENDA O DESAFIO</p>
+                        <h2>Por trás da tecnologia</h2>
+                    </div>
+                </div>
+
+
+                <div class="info-grid">
+
+                    <article class="info-card">
+
+                        <span class="info-icon">⚡</span>
+
+                        <h3>Consumo de energia</h3>
+
+                        <p>
+                            Os servidores precisam funcionar continuamente,
+                            exigindo eletricidade para processar e armazenar
+                            grandes quantidades de dados.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span class="info-icon">💧</span>
+
+                        <h3>Refrigeração</h3>
+
+                        <p>
+                            Os equipamentos produzem calor durante o funcionamento.
+                            Por isso, os data centers precisam de sistemas de
+                            refrigeração para controlar a temperatura.
+                        </p>
+
+                    </article>
+
+
+                    <article class="info-card">
+
+                        <span class="info-icon">🌱</span>
+
+                        <h3>Impactos ambientais</h3>
+
+                        <p>
+                            A infraestrutura digital pode contribuir para
+                            emissões de gases de efeito estufa e aumentar
+                            a pressão sobre os recursos naturais.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SIMULADOR -->
+        <section class="simulator-section">
+
+            <div class="section-wrap">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">ATIVIDADE INTERATIVA</p>
+                        <h2>Simulador de consumo</h2>
+                    </div>
+                </div>
+
+
+                <p class="simulator-intro">
+                    Escolha a quantidade de servidores e o tempo de funcionamento
+                    para simular o consumo de energia e a demanda adicional
+                    da infraestrutura de um data center.
+                </p>
+
+
+                <div class="simulator-container">
+
+
+                    <!-- CONTROLES -->
+                    <div class="simulator-controls">
+
+                        <div class="control-group">
+
+                            <label for="servers">
+                                Quantidade de servidores
+                            </label>
+
+                            <input
+                                type="range"
+                                id="servers"
+                                min="10"
+                                max="1000"
+                                step="10"
+                                value="100"
+                            >
+
+                            <div class="range-labels">
+
+                                <span>10 servidores</span>
+
+                                <strong id="servers-value">
+                                    100
+                                </strong>
+
+                                <span>1.000 servidores</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="control-group">
+
+                            <label for="hours">
+                                Horas de funcionamento por dia
+                            </label>
+
+                            <input
+                                type="range"
+                                id="hours"
+                                min="1"
+                                max="24"
+                                step="1"
+                                value="24"
+                            >
+
+                            <div class="range-labels">
+
+                                <span>1 hora</span>
+
+                                <strong id="hours-value">
+                                    24
+                                </strong>
+
+                                <span>24 horas</span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="simulator-note">
+
+                            <strong>Como funciona?</strong>
+
+                            <p>
+                                O simulador considera uma potência média
+                                ilustrativa por servidor. Também acrescenta
+                                uma estimativa de energia para refrigeração
+                                e outros componentes da infraestrutura.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="button button-outline reset-button"
+                            id="reset-simulator"
+                        >
+                            Reiniciar simulação
+                        </button>
+
+                    </div>
+
+
+                    <!-- RESULTADOS -->
+                    <div class="simulator-results">
+
+                        <h3>Resultados estimados</h3>
+
+                        <p class="results-description">
+                            Confira o consumo calculado para o cenário escolhido.
+                        </p>
+
+
+                        <div class="results-grid">
+
+
+                            <!-- CONSUMO DOS SERVIDORES -->
+                            <article class="result-card">
+
+                                <span class="result-label">
+                                    Consumo dos servidores
+                                </span>
+
+                                <strong id="server-consumption">
+                                    1.200
+                                </strong>
+
+                                <span class="result-unit">
+                                    kWh/dia
+                                </span>
+
+                                <small>
+                                    Energia dos equipamentos
+                                </small>
+
+                            </article>
+
+
+                            <!-- CONSUMO TOTAL -->
+                            <article class="result-card highlight">
+
+                                <span class="result-label">
+                                    Consumo total
+                                </span>
+
+                                <strong id="total-consumption">
+                                    1.680
+                                </strong>
+
+                                <span class="result-unit">
+                                    kWh/dia
+                                </span>
+
+                                <small>
+                                    Servidores e infraestrutura
+                                </small>
+
+                            </article>
+
+
+                            <!-- INFRAESTRUTURA -->
+                            <article class="result-card">
+
+                                <span class="result-label">
+                                    Consumo adicional
+                                </span>
+
+                                <strong id="cooling-consumption">
+                                    480
+                                </strong>
+
+                                <span class="result-unit">
+                                    kWh/dia
+                                </span>
+
+                                <small>
+                                    Refrigeração e infraestrutura
+                                </small>
+
+                            </article>
+
+                        </div>
+
+
+                        <!-- COMPARAÇÃO -->
+                        <div class="consumption-comparison">
+
+                            <h4>Distribuição do consumo</h4>
+
+
+                            <!-- SERVIDORES -->
+                            <div class="comparison-item">
+
+                                <div class="comparison-header">
+
+                                    <span>Servidores</span>
+
+                                    <strong id="server-percentage">
+                                        71,43%
+                                    </strong>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill"
+                                        id="server-progress"
+                                        style="width: 71.43%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INFRAESTRUTURA -->
+                            <div class="comparison-item">
+
+                                <div class="comparison-header">
+
+                                    <span>Infraestrutura adicional</span>
+
+                                    <strong id="cooling-percentage">
+                                        28,57%
+                                    </strong>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill secondary"
+                                        id="cooling-progress"
+                                        style="width: 28.57%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AVISO -->
+                <div class="simulator-disclaimer">
+
+                    <strong>Importante:</strong>
+
+                    <p>
+                        Os números apresentados são estimativas didáticas
+                        utilizadas para fins de comparação. O consumo real
+                        varia conforme o modelo dos servidores, a eficiência
+                        dos equipamentos, a carga de processamento e o sistema
+                        de refrigeração utilizado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXÃO -->
+        <section class="content-section reflection-section">
+
+            <div class="section-wrap">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">PENSE SOBRE O ASSUNTO</p>
+                        <h2>O que podemos concluir?</h2>
+                    </div>
+                </div>
+
+
+                <div class="reflection-grid">
+
+                    <article class="reflection-card">
+
+                        <span class="reflection-number">01</span>
+
+                        <h3>Crescimento digital</h3>
+
+                        <p>
+                            O que acontece com o consumo de recursos naturais
+                            quando a quantidade de servidores aumenta?
+                        </p>
+
+                    </article>
+
+
+                    <article class="reflection-card">
+
+                        <span class="reflection-number">02</span>
+
+                        <h3>Sustentabilidade</h3>
+
+                        <p>
+                            Como empresas e governos podem reduzir os impactos
+                            ambientais causados pelos data centers?
+                        </p>
+
+                    </article>
+
+
+                    <article class="reflection-card">
+
+                        <span class="reflection-number">03</span>
+
+                        <h3>Responsabilidade</h3>
+
+                        <p>
+                            Como podemos utilizar a tecnologia de maneira
+                            consciente, considerando seus impactos ambientais?
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENCERRAMENTO -->
+        <section class="closing-section">
+
+            <div class="section-wrap">
+
+                <p class="eyebrow">CONEXÃO TERRA</p>
+
+                <h2>
+                    O mundo digital também depende dos recursos do mundo real.
+                </h2>
+
+                <p>
+                    Compreender o funcionamento dos data centers é um passo
+                    importante para discutir os desafios ambientais da
+                    sociedade digital.
+                </p>
+
+                <a
+                    href="conteudos.html"
+                    class="button button-primary"
+                >
+                    Explorar os conteúdos
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Conexão Terra — Tecnologia, sociedade e meio ambiente.
+        </p>
+
+    </footer>
+
+</body>
+</html>

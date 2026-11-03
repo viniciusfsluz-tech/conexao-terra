@@ -992,3 +992,503 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
     justify-content: center;
   }
 }
+
+/* =====================================================
+   CONEXÃO TERRA
+   ESTILOS DA PÁGINA DE ATIVIDADE
+===================================================== */
+
+
+/* =====================================================
+   1. APRESENTAÇÃO DA ATIVIDADE
+===================================================== */
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero .section-tag {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.page-hero h1 span {
+    color: var(--primary, #8dba78);
+}
+
+
+/* =====================================================
+   2. SEÇÕES E TÍTULOS
+===================================================== */
+
+.simulator-section {
+    background: rgba(100, 140, 90, 0.045);
+}
+
+.section-heading {
+    max-width: 780px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading .section-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   3. CARTÕES INFORMATIVOS
+===================================================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.info-card {
+    padding: 26px;
+    background: var(--surface, #111a2b);
+    border: 1px solid rgba(130, 170, 120, 0.16);
+    border-radius: 14px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(130, 190, 110, 0.5);
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+    color: var(--primary, #8dba78);
+}
+
+.info-card p {
+    line-height: 1.7;
+    color: var(--text-secondary, #aab5a8);
+}
+
+
+/* =====================================================
+   4. ÁREA PRINCIPAL DO SIMULADOR
+===================================================== */
+
+.simulator-container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.simulator-controls,
+.simulator-results {
+    padding: 30px;
+    background: var(--surface, #111a2b);
+    border: 1px solid rgba(130, 170, 120, 0.18);
+    border-radius: 18px;
+}
+
+.simulator-controls h3,
+.simulator-results h3 {
+    margin-bottom: 26px;
+    font-size: 1.35rem;
+}
+
+
+/* =====================================================
+   5. CONTROLES
+===================================================== */
+
+.control-group {
+    margin-bottom: 34px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.control-value {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.control-value span:first-child {
+    color: var(--primary, #8dba78);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.control-value span:last-child {
+    color: var(--text-secondary, #aab5a8);
+    font-size: 0.9rem;
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    height: 7px;
+    margin: 8px 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(130, 170, 120, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 19px;
+    height: 19px;
+    background: var(--primary, #8dba78);
+    border: 3px solid #101a17;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--primary, #8dba78);
+    border: 3px solid #101a17;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-group input[type="range"]:focus-visible {
+    outline: 2px solid var(--primary, #8dba78);
+    outline-offset: 5px;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    color: var(--text-secondary, #aab5a8);
+    font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   6. AVISO DOS CONTROLES
+===================================================== */
+
+.simulator-note {
+    margin-top: 12px;
+    padding: 18px;
+    background: rgba(100, 150, 90, 0.08);
+    border-left: 3px solid var(--primary, #8dba78);
+    border-radius: 8px;
+}
+
+.simulator-note strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--primary, #8dba78);
+}
+
+.simulator-note p {
+    color: var(--text-secondary, #aab5a8);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   7. BOTÃO DE RESTAURAR
+===================================================== */
+
+.reset-button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px 18px;
+    background: transparent;
+    color: var(--primary, #8dba78);
+    border: 1px solid var(--primary, #8dba78);
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.reset-button:hover {
+    background: var(--primary, #8dba78);
+    color: #101a17;
+}
+
+.reset-button:focus-visible {
+    outline: 2px solid var(--primary, #8dba78);
+    outline-offset: 4px;
+}
+
+
+/* =====================================================
+   8. CARTÕES DE RESULTADOS
+===================================================== */
+
+.results-description {
+    margin-top: -14px;
+    margin-bottom: 24px;
+    color: var(--text-secondary, #aab5a8);
+    line-height: 1.6;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 20px;
+    background: rgba(100, 140, 90, 0.07);
+    border: 1px solid rgba(130, 170, 120, 0.16);
+    border-radius: 12px;
+}
+
+.result-card.highlight {
+    background: rgba(100, 160, 90, 0.14);
+    border-color: rgba(140, 190, 120, 0.45);
+}
+
+.result-label {
+    color: var(--text-secondary, #aab5a8);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.result-card strong {
+    color: var(--primary, #8dba78);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    overflow-wrap: anywhere;
+}
+
+.result-unit {
+    color: var(--text-secondary, #aab5a8);
+    font-size: 0.82rem;
+}
+
+.result-card small {
+    color: var(--text-secondary, #aab5a8);
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   9. COMPARAÇÃO DE CONSUMO
+===================================================== */
+
+.consumption-comparison {
+    margin-top: 32px;
+}
+
+.consumption-comparison h4 {
+    margin-bottom: 22px;
+    font-size: 1rem;
+}
+
+.comparison-item {
+    margin-bottom: 20px;
+}
+
+.comparison-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 9px;
+    font-size: 0.88rem;
+}
+
+.comparison-header strong {
+    color: var(--primary, #8dba78);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+    background: rgba(130, 170, 120, 0.15);
+    border-radius: 20px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary, #8dba78);
+    border-radius: 20px;
+    transition: width 0.35s ease;
+}
+
+.progress-fill.secondary {
+    background: #739d91;
+}
+
+
+/* =====================================================
+   10. AVISO SOBRE OS VALORES
+===================================================== */
+
+.simulator-disclaimer {
+    margin-top: 28px;
+    padding: 22px 25px;
+    background: rgba(190, 160, 90, 0.07);
+    border: 1px solid rgba(190, 160, 90, 0.22);
+    border-radius: 12px;
+}
+
+.simulator-disclaimer strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #c8b477;
+}
+
+.simulator-disclaimer p {
+    color: var(--text-secondary, #aab5a8);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.simulator-disclaimer p + p {
+    margin-top: 10px;
+}
+
+
+/* =====================================================
+   11. ÁREA DE REFLEXÃO
+===================================================== */
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.reflection-card {
+    position: relative;
+    padding: 28px;
+    background: var(--surface, #111a2b);
+    border: 1px solid rgba(130, 170, 120, 0.16);
+    border-radius: 14px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.reflection-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(130, 190, 110, 0.5);
+}
+
+.reflection-number {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--primary, #8dba78);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.reflection-card h3 {
+    margin-bottom: 12px;
+}
+
+.reflection-card p {
+    color: var(--text-secondary, #aab5a8);
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   12. ENCERRAMENTO
+===================================================== */
+
+.closing-section {
+    padding: 75px 0;
+    text-align: center;
+    background: rgba(100, 140, 90, 0.07);
+}
+
+.closing-section .section-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.closing-section h2 {
+    max-width: 750px;
+    margin: 0 auto 18px;
+}
+
+.closing-section p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: var(--text-secondary, #aab5a8);
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   13. RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .simulator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid,
+    .reflection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .info-grid,
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .simulator-controls,
+    .simulator-results {
+        padding: 22px 18px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-card strong {
+        font-size: 1.7rem;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .simulator-disclaimer {
+        padding: 18px;
+    }
+
+    .closing-section {
+        padding: 55px 0;
+    }
+
+}
