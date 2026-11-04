@@ -1584,3 +1584,50 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
   .filters { grid-template-columns: 1fr; }
   .filters .button { width: 100%; }
 }
+/* ---------- Link para vídeos externos ---------- */
+
+.video-external-link {
+    width: 100%;
+    min-height: 220px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    background:
+        radial-gradient(circle at center, #243d2d 0%, #111b16 75%);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: border-color 0.25s, background 0.25s;
+}
+
+.video-external-link:hover {
+    border-color: var(--primary);
+    background:
+        radial-gradient(circle at center, #304d38 0%, #111b16 75%);
+}
+
+.video-external-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    padding-left: 4px;
+    font-size: 23px;
+    color: #0a100e;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.video-external-link strong {
+    font-size: 1.05rem;
+}
+
+.video-external-link > span:last-child {
+    color: var(--primary);
+    font-size: 0.9rem;
+}

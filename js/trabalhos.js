@@ -155,9 +155,39 @@ function iniciarLista() {
 
 // Player de vídeo: YouTube (nocookie) ou arquivo .mp4 local
 function criarPlayer(video, titulo) {
-    return video.tipo === "youtube"
-        ? `<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.id)}" title="${escaparHTML(video.titulo || titulo)}" loading="lazy" allowfullscreen></iframe>`
-        : `<video controls preload="metadata" src="${escaparHTML(video.src)}">Seu navegador não reproduz este vídeo.</video>`;
+    // Vídeo do YouTube
+    if (video.tipo === "youtube") {
+        return `
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.id)}"
+                title="${escaparHTML(video.titulo || titulo)}"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        `;
+    }
+
+    // Vídeo hospedado em uma página externa
+    if (video.tipo === "externo") {
+        return `
+            <a
+                class="video-external-link"
+                href="${escaparHTML(video.url)}"
+                target="_blank"
+                rel="noopener noreferrer">
+                <span class="video-external-icon">▶</span>
+                <strong>${escaparHTML(video.titulo || titulo)}</strong>
+                <span>Assistir no site oficial ↗</span>
+            </a>
+        `;
+    }
+
+    // Vídeo local (.mp4)
+    return `
+        <video controls preload="metadata" src="${escaparHTML(video.src)}">
+            Seu navegador não reproduz este vídeo.
+        </video>
+    `;
 }
 
 function criarVideo(video, titulo) {

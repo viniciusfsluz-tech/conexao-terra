@@ -61,7 +61,11 @@ const trabalhos = [
             "alt": "Vista aérea de uma instalação de data center, com grandes edifícios, estacionamento e subestação ao redor.",
             "legenda": "Vista aérea de uma instalação de data center."
         },
-        "video": null,
+        "video": {
+        "tipo": "youtube",
+        "id": "tnpxN_uEbbM",
+        "titulo": "Especialistas alertam para impactos de data centers de inteligência artificial"
+        },
         "links": [
             {
                 "texto": "FURTADO; CUNHA. Inteligência artificial, data centers e colonialismo digital (Liinc em Revista, 2024)",
@@ -205,7 +209,11 @@ const trabalhos = [
             "alt": "Água como recurso natural essencial ao abastecimento e à atividade humana.",
             "legenda": "A origem da água e a disponibilidade local importam tanto quanto o volume consumido."
         },
-        "video": null,
+        "video": {
+        "tipo": "externo",
+        "titulo": "Reduzindo o impacto do uso da água nos data centers",
+        "url": "https://jornal.unicamp.br/video/2026/04/07/reduzindo-o-impacto-do-uso-da-agua-nos-data-centers/"
+        },
         "links": [
             {
                 "texto": "Reportagem: Microsoft, refrigeração e consumo de água",
@@ -462,7 +470,11 @@ const trabalhos = [
             "alt": "Corredor com fileiras de servidores em um data center.",
             "legenda": "Fileiras de servidores: a face física da “nuvem”."
         },
-        "video": null,
+        "video": {
+        "tipo": "externo",
+        "titulo": "Bora Entender | Datacenters no Brasil",
+        "url": "https://www.camara.leg.br/tv/bora-entender/1313841-bora-entender-datacenters-no-brasil"
+        },
         "links": [
             {
                 "texto": "FURTADO; CUNHA. Inteligência artificial, data centers e colonialismo digital (Liinc em Revista, 2024)",
