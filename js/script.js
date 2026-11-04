@@ -10,6 +10,17 @@ if (menuButton && navigation) {
     menuButton.textContent = isOpen ? "✕" : "☰";
   });
 
+  // Esc fecha o menu e devolve o foco ao botão (acessibilidade por teclado)
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && navigation.classList.contains("open")) {
+      navigation.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "Abrir menu");
+      menuButton.textContent = "☰";
+      menuButton.focus();
+    }
+  });
+
   navigation.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navigation.classList.remove("open");
@@ -21,9 +32,10 @@ if (menuButton && navigation) {
 }
 
 // Revela blocos conforme entram na tela; mantém tudo visível se o recurso não existir.
-const revealTargets = document.querySelectorAll(
+// Seções marcadas com data-no-reveal (ex.: lista de trabalhos, que muda por filtro) ficam sempre visíveis.
+const revealTargets = [...document.querySelectorAll(
   ".intro, .contrast-card, .featured, .topic-card, .field-note, .callout, .content-section, .method-grid article, .future-grid article, .info-list"
-);
+)].filter(el => !el.closest("[data-no-reveal]") && !el.hasAttribute("data-no-reveal"));
 if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   revealTargets.forEach(el => el.classList.add("reveal-ready"));
   const revealObserver = new IntersectionObserver(entries => {

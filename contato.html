@@ -8,36 +8,31 @@
 
   <title>Contato | Conexão Terra</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/config.js" defer></script>
+  <script src="js/menu.js" defer></script>
   <script src="js/script.js" defer></script>
+  <script src="js/contato.js" defer></script>
 </head>
 
-<body>
+<body data-page="contato" id="topo-pagina">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header" id="topo">
     <a class="logo" href="index.html">
       <span class="logo-mark">◈</span>
       <span>CONEXÃO <strong>TERRA</strong></span>
     </a>
 
-    <button
-      class="menu-toggle"
-      aria-label="Abrir menu"
-      aria-expanded="false"
-      aria-controls="menu-principal"
-      type="button"
-    >☰</button>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
 
-    <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
-      <a href="index.html">Início</a>
-      <a href="conteudos.html">Explorar temas</a>
-      <a href="trabalhos.html">Estudos de caso</a>
-      <a href="sobre.html">O projeto</a>
-      <a class="active" href="contato.html" aria-current="page">Contato</a>
-      <a href="atividade.html">Atividade</a>
-    </nav>
+    <nav class="site-nav" id="menu-principal" aria-label="Navegação principal"></nav>
   </header>
 
-  <main>
+  <main id="conteudo">
     <!-- APRESENTAÇÃO -->
     <section class="page-hero contact-hero">
       <p class="eyebrow"><span></span> CONEXÃO TERRA · CONTATO</p>
@@ -311,37 +306,5 @@
       TECNOLOGIA, TERRITÓRIO E MEIO AMBIENTE
     </span>
   </footer>
-
-  <script>
-    const contactForm = document.getElementById("contact-form");
-    const contactFeedback = document.getElementById("contact-feedback");
-    const contactReset = document.getElementById("contact-reset");
-
-    contactForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      contactForm.reset();
-      contactForm.hidden = true;
-      contactFeedback.hidden = false;
-
-      contactFeedback.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
-    });
-
-    contactReset.addEventListener("click", () => {
-      contactFeedback.hidden = true;
-      contactForm.hidden = false;
-      contactForm.reset();
-
-      contactForm.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-
-      document.getElementById("nome").focus();
-    });
-  </script>
 </body>
 </html>

@@ -13,13 +13,19 @@
 
     <title>Atividade Interativa | Conexão Terra</title>
 
-    <link rel="stylesheet" href="css/style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
 
-    <script src="js/atividade.js" defer></script>
-    <script src="js/script.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/atividade.js" defer></script>
 </head>
 
-<body>
+<body data-page="atividade" id="topo-pagina">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- CABEÇALHO -->
     <header class="site-header">
@@ -29,28 +35,14 @@
             Conexão <strong>Terra</strong>
         </a>
 
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
 
-        <nav class="site-nav" id="nav">
-            <a href="index.html">Início</a>
-            <a href="conteudos.html">Conteúdos</a>
-            <a href="trabalhos.html">Trabalhos</a>
-            <a href="atividade.html" class="active">Atividade</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+        <nav class="site-nav" id="menu-principal" aria-label="Navegação principal"></nav>
 
     </header>
 
 
-    <main>
+    <main id="conteudo">
 
         <!-- APRESENTAÇÃO -->
         <section class="page-hero">

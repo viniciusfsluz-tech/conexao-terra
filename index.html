@@ -7,38 +7,31 @@
 
   <title>Conexão Terra | Geografia + Informática</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/config.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/trabalhos.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 
-<body>
+<body data-page="inicio" id="topo-pagina">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header">
     <a class="logo" href="index.html">
       <span class="logo-mark">◈</span>
       <span>CONEXÃO <strong>TERRA</strong></span>
     </a>
 
-    <button
-      class="menu-toggle"
-      aria-label="Abrir menu"
-      aria-expanded="false"
-      aria-controls="menu-principal"
-      type="button"
-    >
-      ☰
-    </button>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
 
-    <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
-      <a class="active" href="index.html" aria-current="page">Início</a>
-      <a href="conteudos.html">Explorar temas</a>
-      <a href="trabalhos.html">Estudos de caso</a>
-      <a href="sobre.html">O projeto</a>
-      <a href="contato.html">Contato</a>
-      <a href="atividade.html">Atividade</a>
-    </nav>
+    <nav class="site-nav" id="menu-principal" aria-label="Navegação principal"></nav>
   </header>
 
-  <main>
+  <main id="conteudo">
     <!-- APRESENTAÇÃO PRINCIPAL -->
     <section class="hero" id="topo">
       <div class="hero-content">
@@ -74,7 +67,7 @@
           </a>
 
           <a class="button button-quiet" href="trabalhos.html">
-            Ver estudos de caso
+            Ver os trabalhos
           </a>
         </div>
       </div>
@@ -293,7 +286,7 @@
           planejamento ambiental.
         </p>
 
-        <a class="text-link" href="trabalhos.html#data-centers">
+        <a class="text-link" href="trabalhos.html">
           Investigar os data centers ↗
         </a>
       </div>
@@ -324,7 +317,7 @@
           e as populações.
         </p>
 
-        <a class="button button-primary" href="trabalhos.html#data-centers">
+        <a class="button button-primary" href="trabalhos.html">
           Explorar o caso brasileiro <span>↗</span>
         </a>
       </div>
@@ -363,7 +356,7 @@
           href="conteudos.html#infraestrutura"
         >
           <img
-            src="imagens/data-center.jpeg"
+            src="img/data-center.jpeg"
             alt="Fileiras de servidores em um data center"
             loading="lazy"
           >
@@ -386,7 +379,7 @@
           href="conteudos.html#impactos"
         >
           <img
-            src="imagens/terreno-impacto.jpeg"
+            src="img/terreno-impacto.jpeg"
             alt="Terreno e transformações no uso do solo"
             loading="lazy"
           >
@@ -409,7 +402,7 @@
           href="conteudos.html#solucoes"
         >
           <img
-            src="imagens/energia-renovavel.jpeg"
+            src="img/energia-renovavel.jpeg"
             alt="Infraestrutura de energia renovável"
             loading="lazy"
           >
@@ -468,6 +461,13 @@
           Quem decide, quem se beneficia e como os impactos podem ser reduzidos?
         </p>
       </div>
+    </section>
+
+    <!-- VÍDEO (aparece quando config.videoInicio estiver preenchido em js/config.js) -->
+    <section class="content-section" id="video-inicio" hidden>
+      <p class="eyebrow">VÍDEO</p>
+      <h2>Veja o projeto em movimento</h2>
+      <div class="video-frame" id="video-inicio-corpo"></div>
     </section>
 
     <!-- CHAMADA FINAL -->
