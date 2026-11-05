@@ -1026,22 +1026,23 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
     background: rgba(100, 140, 90, 0.045);
 }
 
-.section-heading {
+/* Estes estilos eram da página de atividade, mas valiam para o site todo e desalinhavam os títulos das outras páginas */
+[data-page="atividade"] .section-heading {
     max-width: 780px;
     margin: 0 auto 42px;
     text-align: center;
 }
 
-.section-heading .section-tag {
+[data-page="atividade"] .section-heading .section-tag {
     display: inline-block;
     margin-bottom: 12px;
 }
 
-.section-heading h2 {
+[data-page="atividade"] .section-heading h2 {
     margin-bottom: 16px;
 }
 
-.section-heading p {
+[data-page="atividade"] .section-heading p {
     line-height: 1.8;
 }
 
@@ -1584,6 +1585,45 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
   .filters { grid-template-columns: 1fr; }
   .filters .button { width: 100%; }
 }
+
+
+/* Comparações de energia (js/energia.js) e figuras dos trabalhos */
+.equivalence { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+.equivalence h3 { font: 400 1.7rem/1.3 var(--serif); margin-bottom: 24px; }
+.equivalence-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.equivalence-card { padding: 24px; border: 1px solid var(--line); background: var(--surface); }
+.equivalence-number { margin: 0 0 4px; color: var(--primary); font: 400 2.6rem/1.1 var(--serif); }
+.equivalence-card h4 { margin: 0 0 12px; color: var(--text); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; }
+.equivalence-card p:last-child { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.75; }
+.equivalence-note { margin-top: 18px; color: var(--muted); font-size: .8rem; line-height: 1.8; }
+.equivalence-note a { text-decoration: underline; text-underline-offset: 3px; }
+.equivalent-note { margin: 18px 0 0; padding: 14px 16px; border-left: 2px solid var(--primary-strong); background: var(--surface); color: var(--text); font-size: .92rem; }
+.detail-texto figure.detail-figure { margin: 22px 0; }
+.detail-texto figure.detail-figure img { max-height: 520px; object-fit: contain; background: #000; }
+@media (max-width: 900px) { .equivalence-grid { grid-template-columns: 1fr; } }
+
+
+/* Seção "O que acontece quando a nuvem cresce?" (index.html): estes estilos não existiam */
+.cloud-section { padding-bottom: 90px; }
+.cloud-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 28px; align-items: start; }
+.cloud-data { padding: 30px; border: 1px solid var(--line); background: linear-gradient(135deg, rgba(62,128,88,.15), transparent 75%), var(--surface); }
+.cloud-data-label { display: block; color: var(--muted); font-size: .66rem; letter-spacing: .15em; }
+.cloud-number { margin: 10px 0 8px; color: var(--primary); font: 400 4.2rem/1 var(--serif); }
+.cloud-number span { font-size: 1.4rem; color: var(--text); }
+.cloud-data-description { color: var(--text); }
+.cloud-source { color: var(--muted); font-size: .8rem; line-height: 1.7; }
+.cloud-explanation h3 { font: 400 1.7rem/1.3 var(--serif); }
+.cloud-explanation > p { color: var(--muted); }
+.cloud-impact-list { display: grid; gap: 14px; margin-top: 22px; }
+.cloud-impact-item { display: grid; grid-template-columns: 48px 1fr; gap: 14px; padding: 16px 18px; border: 1px solid var(--line); background: var(--surface); }
+.cloud-impact-symbol { color: var(--primary); font: 400 1.5rem/1 var(--serif); }
+.cloud-impact-item h4 { margin: 0 0 4px; font-size: 1rem; }
+.cloud-impact-item p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.7; }
+@media (max-width: 900px) { .cloud-grid { grid-template-columns: 1fr; } .cloud-number { font-size: 3.4rem; } }
+
+/* Figuras dos trabalhos: imagens pequenas ficam centralizadas, sem fundo preto */
+.detail-texto figure.detail-figure { background: var(--surface); text-align: center; }
+.detail-texto figure.detail-figure img { width: auto; max-width: 100%; margin: 0 auto; background: transparent; }
 /* ---------- Link para vídeos externos ---------- */
 
 .video-external-link {

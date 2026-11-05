@@ -13,7 +13,7 @@ const config = {
     // Vídeo da página inicial. Use null para ocultar a seção ou:
     //   { tipo: "youtube", id: "CODIGO_DO_VIDEO", titulo: "Descrição do vídeo" }
     //   { tipo: "arquivo", src: "video/apresentacao.mp4", titulo: "Descrição do vídeo" }
-    videoInicio: null
+    videoInicio: { tipo: "youtube", id: "in9edgvFaC0", titulo: "O Lado Sombrio da Explosão dos Data Centers de IA nos Estados Unidos  Visão Aérea" }
 };
 
 // Itens do menu. A chave "pagina" deve ser igual ao data-page do <body>.

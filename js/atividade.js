@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const barraServidores = document.getElementById("server-progress");
     const barraInfraestrutura = document.getElementById("cooling-progress");
 
+    // Equivalência em habitantes (usa js/energia.js; opcional)
+    const equivalencia = document.getElementById("equivalent-people");
+
     // Botão
     const botaoResetar = document.getElementById("reset-simulator");
 
@@ -141,6 +144,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         barraInfraestrutura.style.width =
             porcentagemInfraestrutura + "%";
+
+
+        /* 8.1 EQUIVALÊNCIA EM HABITANTES */
+
+        if (equivalencia && typeof habitantesEquivalentes === "function") {
+            // energiaTotal é por dia; multiplicamos por 365 para comparar com o consumo anual por habitante
+            const habitantes = habitantesEquivalentes(energiaTotal * 365);
+            equivalencia.textContent =
+                `Mantido assim o ano todo, esse consumo equivale ao de cerca de ${textoHabitantes(habitantes)} na média do Brasil.`;
+        }
 
     }
 

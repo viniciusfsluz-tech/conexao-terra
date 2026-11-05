@@ -29,7 +29,7 @@ const urlDoTrabalho = trabalho => `trabalho.html?area=geografia&id=${encodeURICo
 
 // Texto puro do trabalho (sem marcadores), usado na busca
 const textoPuro = trabalho => trabalho.texto
-    .map(bloco => bloco.replace(/^(###|>>|>|-)\s*/, ""))
+    .map(bloco => bloco.replace(/^!\[(.*?)\]\(.*?\)/, "$1").replace(/^(###|>>|>|-)\s*/, ""))
     .join(" ");
 
 /* ---------- Texto do trabalho: array de blocos -> HTML ---------- */
@@ -54,7 +54,12 @@ function renderizarTexto(blocos) {
     };
 
     blocos.forEach(bloco => {
-        if (bloco.startsWith(">> ")) {
+        const imagem = bloco.match(/^!\[(.*?)\]\((.+?)\)\s*(.*)$/);
+        if (imagem) {
+            fecharLista(); fecharDestaque();
+            const [, alt, src, legenda] = imagem;
+            html += `<figure class="detail-figure"><img src="${escaparHTML(src)}" alt="${escaparHTML(alt)}" loading="lazy">${legenda ? `<figcaption>${escaparHTML(legenda)}</figcaption>` : ""}</figure>`;
+        } else if (bloco.startsWith(">> ")) {
             fecharLista(); fecharDestaque();
             destaque = { titulo: bloco.slice(3), linhas: [] };
         } else if (bloco.startsWith("> ")) {
@@ -244,6 +249,7 @@ function iniciarVideoInicio() {
     const secao = document.querySelector("#video-inicio");
     if (!secao) return;
     if (!config.videoInicio) { secao.hidden = true; return; }
+    secao.hidden = false;
     secao.querySelector("#video-inicio-corpo").innerHTML = criarPlayer(config.videoInicio, "Vídeo do projeto");
 }
 

@@ -9,6 +9,7 @@
  *  - texto: lista de blocos. Convenções:
  *      "### Título"  -> subtítulo      "- item"   -> item de lista
  *      ">> Título"   -> título de um destaque, seguido de linhas "> texto"
+ *      "![descrição](img/arquivo.png) legenda"  -> imagem com texto alternativo e legenda
  *  - video: null, ou { tipo: "youtube", id: "CODIGO_DO_VIDEO" }, ou { tipo: "arquivo", src: "video/arquivo.mp4" }
  */
 
