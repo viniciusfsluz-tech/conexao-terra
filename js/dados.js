@@ -65,7 +65,8 @@ const trabalhos = [
         "video": {
         "tipo": "youtube",
         "id": "tnpxN_uEbbM",
-        "titulo": "Especialistas alertam para impactos de data centers de inteligência artificial"
+        "titulo": "Especialistas alertam para impactos de data centers de inteligência artificial",
+        "credito": "The New York Times, “Data center scale” (2026)",
         },
         "links": [
             {
@@ -164,7 +165,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/terreno-impacto.jpeg",
             "alt": "Terreno aberto relacionado ao planejamento e à ocupação do espaço.",
-            "legenda": "Terreno em transformação: o uso do solo é um dos pontos da investigação."
+            "legenda": "Terreno em transformação: o uso do solo é um dos pontos da investigação.",
+            "credito": "Evergreen Site Works (evergreensiteworks.com)"
         },
         "video": null,
         "links": [
@@ -208,7 +210,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/escassez-agua.jpeg",
             "alt": "Água como recurso natural essencial ao abastecimento e à atividade humana.",
-            "legenda": "A origem da água e a disponibilidade local importam tanto quanto o volume consumido."
+            "legenda": "A origem da água e a disponibilidade local importam tanto quanto o volume consumido.",
+            "credito": "Imagem associada ao artigo da Nature “Brazil is in water crisis” (2021)"
         },
         "video": {
         "tipo": "externo",
@@ -270,7 +273,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/subestacao-eletrica.jpeg",
             "alt": "Subestação elétrica com torres e equipamentos de transmissão de energia.",
-            "legenda": "Subestações fazem parte da infraestrutura de apoio dos data centers."
+            "legenda": "Subestações fazem parte da infraestrutura de apoio dos data centers.",
+            "credito": "Hartek (hartek.com)"
         },
         "video": null,
         "links": [
@@ -312,7 +316,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/limeira.jpeg",
             "alt": "Vista aérea de uma cidade média do interior paulista, com prédios e casas de telhado alaranjado.",
-            "legenda": "Cidades do interior paulista recebem os investimentos e as demandas de infraestrutura."
+            "legenda": "Cidades do interior paulista recebem os investimentos e as demandas de infraestrutura.",
+            "credito": "Wikipédia, verbete “Limeira”"
         },
         "video": null,
         "links": [
@@ -414,7 +419,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/energia-renovavel.jpeg",
             "alt": "Painéis solares e aerogeradores representando fontes de energia renovável.",
-            "legenda": "Fontes renováveis podem reduzir emissões, mas dependem da origem comprovada da energia."
+            "legenda": "Fontes renováveis podem reduzir emissões, mas dependem da origem comprovada da energia.",
+            "credito": "Adobe Stock"
         },
         "video": null,
         "links": [
@@ -469,7 +475,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/data-center.jpeg",
             "alt": "Corredor com fileiras de servidores em um data center.",
-            "legenda": "Fileiras de servidores: a face física da “nuvem”."
+            "legenda": "Fileiras de servidores: a face física da “nuvem”.",
+            "credito": "iStock"
         },
         "video": {
         "tipo": "externo",
