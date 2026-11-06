@@ -60,7 +60,8 @@ const trabalhos = [
         "imagem": {
             "src": "img/data-center-aereo.jpeg",
             "alt": "Vista aérea de uma instalação de data center, com grandes edifícios, estacionamento e subestação ao redor.",
-            "legenda": "Vista aérea de uma instalação de data center."
+            "legenda": "Vista aérea de uma instalação de data center.",
+            "credito": "The New York Times, “Data center scale” (2026)"
         },
         "video": {
         "tipo": "youtube",
