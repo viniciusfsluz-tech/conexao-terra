@@ -60,3 +60,38 @@ if (progress) {
   window.addEventListener("scroll", updateProgress, { passive: true });
   updateProgress();
 }
+// LOGO: MOSTRAR A EQUIPE (só existe no index.html)
+const logoMarks = document.querySelectorAll(".logo-mark");
+const teamModal = document.querySelector("#team-modal");
+const closeTeamModal = document.querySelector("#team-modal-close");
+
+if (teamModal && closeTeamModal) {
+  function openTeamModal() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    teamModal.classList.add("active");
+    teamModal.setAttribute("aria-hidden", "false");
+    closeTeamModal.focus();
+  }
+
+  function closeModal() {
+    teamModal.classList.remove("active");
+    teamModal.setAttribute("aria-hidden", "true");
+  }
+
+  logoMarks.forEach(logo => {
+    logo.addEventListener("click", event => {
+      event.preventDefault();
+      openTeamModal();
+    });
+  });
+
+  closeTeamModal.addEventListener("click", closeModal);
+
+  teamModal.addEventListener("click", event => {
+    if (event.target === teamModal) closeModal();
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && teamModal.classList.contains("active")) closeModal();
+  });
+}

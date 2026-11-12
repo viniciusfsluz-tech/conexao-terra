@@ -40,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Equivalência em habitantes (usa js/energia.js; opcional)
     const equivalencia = document.getElementById("equivalent-people");
 
+    const equivalenciaNumero = document.getElementById("equivalent-number");
+    const equivalenciaUnidade = document.getElementById("equivalent-unit");
     // Botão
     const botaoResetar = document.getElementById("reset-simulator");
 
@@ -153,6 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const habitantes = habitantesEquivalentes(energiaTotal * 365);
             equivalencia.textContent =
                 `Mantido assim o ano todo, esse consumo equivale ao de cerca de ${textoHabitantes(habitantes)} na média do Brasil.`;
+                if (equivalenciaNumero) equivalenciaNumero.textContent = `≈ ${formatarPessoas(habitantes)}`;
+                if (equivalenciaUnidade) equivalenciaUnidade.textContent = habitantes >= 1e6 ? "de habitantes" : "habitantes";
         }
 
     }
