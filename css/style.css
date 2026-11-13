@@ -1473,7 +1473,10 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
     display: inline-block;
     margin-bottom: 15px;
 }
-
+.result-feature {
+    grid-column: auto;
+    grid-row: auto;
+}
 .closing-section h2 {
     max-width: 750px;
     margin: 0 auto 18px;
