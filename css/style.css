@@ -220,7 +220,14 @@ li::marker { color: var(--primary); }
    ========================================================= */
 :root { --lime: #c0e6a6; --glow: rgba(131,189,139,.28); }
 body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10), transparent 32%), radial-gradient(ellipse at 90% 62%, rgba(32,75,49,.09), transparent 34%); }
-.site-header { position: relative; z-index: 20; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  box-shadow: 0 0 0 100vmax var(--bg);
+  clip-path: inset(0 -100vmax -2px -100vmax);
+}
 .site-header::before { content:""; position:absolute; left:0; right:0; bottom:-1px; height:1px; background:linear-gradient(90deg,transparent,var(--primary),transparent); opacity:.55; }
 .logo-mark { text-shadow:0 0 22px var(--glow); transition:transform .35s ease; }
 .logo:hover .logo-mark { transform:rotate(45deg) scale(1.08); }
@@ -1776,3 +1783,21 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
 @media (prefers-reduced-motion: reduce) {
   .team-modal-content { animation: none; }
 }
+
+/* LOGO-MARK: planeta com órbita de conexão (img/logo-mark.svg) no lugar do símbolo ◈ */
+.logo-mark,
+.footer-logo .logo-mark {
+  display: inline-block;
+  flex: none;
+  width: 100px;
+  height: 100px;
+  font-size: 0;
+  color: transparent;
+  text-shadow: none;
+  background: url("../img/logo-mark.png") center / contain no-repeat;
+  filter: drop-shadow(0 0 8px var(--glow));
+  transition: transform .35s ease;
+}
+.footer-logo .logo-mark { width: 34px; height: 34px; }
+.logo:hover .logo-mark { transform: rotate(-12deg) scale(1.08); }
+@media (prefers-reduced-motion: reduce) { .logo:hover .logo-mark { transform: none; } }
