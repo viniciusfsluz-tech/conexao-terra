@@ -1801,3 +1801,28 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
 .footer-logo .logo-mark { width: 34px; height: 34px; }
 .logo:hover .logo-mark { transform: rotate(-12deg) scale(1.08); }
 @media (prefers-reduced-motion: reduce) { .logo:hover .logo-mark { transform: none; } }
+
+/* QR Code no fim da página inicial */
+.qr-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 100px;
+  padding: 36px 42px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.qr-text h2 { margin-bottom: 12px; }
+.qr-text p:last-child { margin-bottom: 0; color: var(--muted); }
+.qr-image {
+  width: 180px;
+  height: 180px;
+  flex: none;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+@media (max-width: 760px) {
+  .qr-section { flex-direction: column; align-items: flex-start; padding: 28px 22px; gap: 24px; margin-bottom: 70px; }
+}
