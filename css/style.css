@@ -1826,3 +1826,41 @@ body { background-image: radial-gradient(ellipse at 12% 18%, rgba(43,88,57,.10),
 @media (max-width: 760px) {
   .qr-section { flex-direction: column; align-items: flex-start; padding: 28px 22px; gap: 24px; margin-bottom: 70px; }
 }
+/* QUIZ (página Atividade) */
+.quiz-card {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: clamp(22px, 4vw, 40px);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.quiz-progress { margin: 0 0 10px; color: var(--primary); font-size: .72rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+.quiz-bar { height: 4px; margin-bottom: 26px; background: var(--line); }
+.quiz-bar span { display: block; height: 100%; background: var(--primary); transition: width .3s ease; }
+.quiz-question { margin: 0 0 22px; font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.4; }
+.quiz-options { display: grid; gap: 12px; }
+.quiz-option {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  text-align: left;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease;
+}
+.quiz-option:hover:not(:disabled) { border-color: var(--primary); background: rgba(131,189,139,.08); }
+.quiz-option:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.quiz-option:disabled { cursor: default; }
+.quiz-option.correta { border-color: #4fae6b; background: rgba(79,174,107,.16); }
+.quiz-option.errada { border-color: #d9776a; background: rgba(217,119,106,.14); }
+.quiz-feedback { margin: 20px 0 0; padding: 14px 16px; border-left: 3px solid var(--line); color: var(--text); line-height: 1.7; }
+.quiz-feedback.ok { border-left-color: #4fae6b; }
+.quiz-feedback.erro { border-left-color: #d9776a; }
+.quiz-next { margin-top: 22px; }
+.quiz-score { margin: 0 0 8px; font-size: clamp(2.6rem, 6vw, 3.8rem); line-height: 1.1; color: var(--primary); }
+.quiz-message { margin: 0 0 6px; color: var(--muted); line-height: 1.8; }
