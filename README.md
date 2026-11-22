@@ -18,20 +18,33 @@ IFSP — Campus Cubatão · Turma 148 · ano letivo 2026 · Geografia (prof. Aug
 
 ## Link do site publicado (GitHub Pages)
 
-https://viniciusfsluz-tech.github.io/conexao-terra/ *(confirmar se o Pages está ativado: Settings → Pages → branch `main`, pasta `/ (root)`)*
+https://viniciusfsluz-tech.github.io/conexao-terra/
+
+## QR Code
+
+Fica no fim da página inicial e abre o site publicado (link acima). A imagem é `img/qrcode.png`.
 
 ## Como abrir
 
 Dê um duplo clique em `index.html`. Não precisa de servidor.
 
+## Guia de estilo
+
+- **Paleta (variáveis em `:root` no `css/style.css`):** fundo `#0a100e`, cartões `#111b16`, cartões secundários `#18261e`, texto `#e6ebdf`, texto secundário `#a6b2a5`, destaque `#83bd8b`, destaque forte `#3e8058` e linhas `#2b4033`.
+- **Tipografia:** Inter (Google Fonts) para textos e botões; Georgia (serifada) para os títulos `h1` e `h2`.
+- **Tema:** escuro, com tons de verde ligados a Geografia e meio ambiente.
+- **Componentes:** botões (`.button`), cartões, seções com título em destaque, formulário de contato (demonstrativo), cartões de trabalho, simulador e quiz.
+- **Logo:** `img/logo-mark.png` (planeta com órbita e servidor, unindo Terra e data centers).
+- **Justificativa:** o verde remete ao meio ambiente; o fundo escuro e o contraste alto destacam números e textos; a fonte serifada nos títulos dá um ar de revista de pesquisa.
+
 ## Estrutura de pastas
 
 ```
-index.html          Início
+index.html          Início (com QR Code no fim da página)
 conteudos.html      Explorar temas (infraestrutura, impactos, soluções, fontes de pesquisa)
 trabalhos.html      Lista de trabalhos com busca e filtros (gerada por JS)
 trabalho.html       Detalhe de qualquer trabalho (?area=geografia&id=...)
-atividade.html      Atividade interativa: simulador de consumo de um data center
+atividade.html      Atividade interativa: simulador de consumo de um data center e quiz de 6 perguntas
 sobre.html          O projeto e a equipe
 contato.html        Contato (formulário apenas demonstrativo, nada é enviado)
 css/style.css       Paleta (variáveis em :root), tipografia e layout
@@ -40,12 +53,20 @@ js/dados.js         Array com todos os trabalhos de Geografia
 js/menu.js          Menu gerado a partir de itensMenu
 js/trabalhos.js     Cartões, filtros, busca e página de detalhe
 js/atividade.js     Simulador de consumo (com equivalência em habitantes)
+js/quiz.js          Quiz da página Atividade (perguntas em um array)
 js/energia.js       Comparações de energia: dados-base com fonte e cálculo de habitantes equivalentes
 js/contato.js       Formulário de contato (simulação)
 js/script.js        Menu móvel, animações de entrada, barra de leitura
-img/                Imagens (favicon.png é o ícone das abas)
-video/              (opcional) vídeos pequenos em .mp4; hoje os vídeos são do YouTube ou links externos
+img/                Imagens (favicon.png, logo-mark.png, equipe.png, qrcode.png e as imagens dos temas)
 ```
+
+## Recursos de interatividade
+
+- **Simulador de consumo** (`atividade.html`): o visitante escolhe a quantidade de servidores e as horas de funcionamento e vê o consumo estimado, a distribuição e a equivalência em habitantes.
+- **Quiz** (`atividade.html`): 6 perguntas de múltipla escolha sobre o conteúdo do site, com feedback a cada resposta, pontuação final e botão para refazer. As perguntas ficam em `js/quiz.js`.
+- **Trabalhos com busca e filtros** (`trabalhos.html`): lista gerada por JavaScript a partir de `js/dados.js`.
+- **Modal da equipe** (`index.html`): ao clicar no logo-mark, abre a foto dos integrantes.
+- **Menu responsivo**, animações de entrada e barra de leitura (`js/script.js`).
 
 ## Como cadastrar um trabalho (`js/dados.js`)
 
@@ -84,22 +105,26 @@ video/              (opcional) vídeos pequenos em .mp4; hoje os vídeos são do
 
 **Textos:** escritos pelo grupo a partir das fontes listadas em cada trabalho (seção "Para saber mais") e na página `conteudos.html` (IEA, Lawrence Berkeley National Laboratory, Folha de S.Paulo, MPC-SP, Planalto, Microsoft, Scala e artigos acadêmicos).
 
-**Imagens** (todas em `img/`). Confirme a licença de cada uma antes da entrega:
+**Imagens** (todas em `img/`). As imagens de terceiros abaixo pertencem aos seus respectivos autores e titulares. Elas são usadas **exclusivamente para fins acadêmicos, em um trabalho escolar sem qualquer finalidade comercial ou lucrativa**, com o crédito da origem indicado.
 
-| Arquivo | Origem / licença |
-|---|---|
-| `ComoFuncionaUmDataCenter.jpeg` | Infográfico com crédito "System ITs" indicado na imagem. Licença: **confirmar** |
-| `MapaDataCentersNoBrasil.jpeg` | Mapa com fonte "Ceará Tech Hub" indicada na imagem. Licença: **confirmar** |
-| `data-center-aereo.jpeg` | The New York Times, interativo "Data center scale" (nytimes.com/interactive/2026/10/05/upshot/data-center-scale.html). Direitos reservados: **confirmar uso**, ou trocar |
-| `data-center.jpeg` | iStock, busca "futuristic modern server room in data center" (istockphoto.com). Banco pago: **confirmar licença**, ou trocar |
-| `energia-renovavel.jpeg` | Adobe Stock, busca "solar wind farm" (stock.adobe.com). Banco pago: **confirmar licença**, ou trocar |
-| `escassez-agua.jpeg` | Associada ao artigo da Nature "Brazil is in water crisis" (nature.com/articles/d41586-021-03625-w); a página não mostra imagem nem crédito: **confirmar autor/agência** |
-| `limeira.jpeg` | Wikipédia, verbete Limeira (pt.wikipedia.org/wiki/Limeira). **Conferir autor e licença na página do arquivo** (Wikimedia Commons) |
-| `refrigeracao.jpeg` | Airedale (airedale.com/2024/07/30/airedale_launches_data_center_cooling_controls_system_in_u-s/). **Confirmar uso** |
-| `resfriamento-diagrama.jpeg` | ISS Mechanical (issmechanical.com/data-center-cooling-strategies/). **Confirmar uso** |
-| `subestacao-eletrica.jpeg` | Hartek (hartek.com/post/why-substation-projects-are-the-backbone-of-indias-power-grid-infrastructure/). **Confirmar uso** |
-| `terreno-impacto.jpeg` | Evergreen Site Works (evergreensiteworks.com/land-clearing-services/). **Confirmar uso** |
-| `favicon.png` | Ícone da aba, feito pelo grupo |
+| Arquivo | Origem | Situação de uso |
+|---|---|---|
+| `ComoFuncionaUmDataCenter.jpeg` | Infográfico com crédito "System ITs" indicado na imagem | Uso acadêmico, sem fins lucrativos |
+| `MapaDataCentersNoBrasil.jpeg` | Mapa com fonte "Ceará Tech Hub" indicada na imagem | Uso acadêmico, sem fins lucrativos |
+| `data-center-aereo.jpeg` | The New York Times, interativo "Data center scale" (nytimes.com/interactive/2026/10/05/upshot/data-center-scale.html) | Uso acadêmico, sem fins lucrativos |
+| `data-center.jpeg` | iStock, busca "futuristic modern server room in data center" (istockphoto.com) | Uso acadêmico, sem fins lucrativos |
+| `energia-renovavel.jpeg` | Adobe Stock, busca "solar wind farm" (stock.adobe.com) | Uso acadêmico, sem fins lucrativos |
+| `escassez-agua.jpeg` | Associada ao artigo da Nature "Brazil is in water crisis" (nature.com/articles/d41586-021-03625-w); a página não informa autor | Uso acadêmico, sem fins lucrativos |
+| `limeira.jpeg` | Wikipédia, verbete Limeira (pt.wikipedia.org/wiki/Limeira) | Uso acadêmico, sem fins lucrativos (conferir licença na página do arquivo, no Wikimedia Commons) |
+| `refrigeracao.jpeg` | Airedale (airedale.com/2024/07/30/airedale_launches_data_center_cooling_controls_system_in_u-s/) | Uso acadêmico, sem fins lucrativos |
+| `resfriamento-diagrama.jpeg` | ISS Mechanical (issmechanical.com/data-center-cooling-strategies/) | Uso acadêmico, sem fins lucrativos |
+| `subestacao-eletrica.jpeg` | Hartek (hartek.com/post/why-substation-projects-are-the-backbone-of-indias-power-grid-infrastructure/) | Uso acadêmico, sem fins lucrativos |
+| `terreno-impacto.jpeg` | Evergreen Site Works (evergreensiteworks.com/land-clearing-services/) | Uso acadêmico, sem fins lucrativos |
+| `equipe.png` | Foto da equipe | Feita pelo grupo |
+| `favicon.png`, `logo-mark.png` | Ícone da aba e logo do site | Feitos para o grupo |
+| `qrcode.png` | QR Code do site publicado | Gerado para o grupo |
+
+Se algum titular não quiser que a imagem seja usada, ela será retirada ou trocada.
 
 ## Dados de energia (página inicial e simulador)
 
@@ -114,10 +139,3 @@ Os cartões "Quanto isso representa?" e a frase "equivale a N habitantes" do sim
 | Subestações do campus Barueri (Scala) | 2 × 60 MW | Scala Data Centers |
 
 Cálculo: consumo por habitante = 650,4 TWh ÷ 212,6 milhões ≈ 3.059 kWh por ano (todos os setores, não só residências). O cenário de Barueri é um **limite máximo** (capacidade publicada funcionando 8.760 h no ano), não consumo medido.
-
-## Pendências antes da entrega
-
-- Confirmar a licença de cada imagem (tabela acima) e, se possível, trocar por imagens de licença livre (Wikimedia Commons, Unsplash) ou próprias.
-- Adicionar um vídeo na página inicial: preencher `videoInicio` em `js/config.js` (YouTube "não listado" ou `.mp4` em `video/`).
-- Conferir a data dos trabalhos em `js/dados.js` (usamos 2026-10-29, data do primeiro commit).
-- Os commits são feitos pelo líder do grupo; os demais integrantes constam na tabela de integrantes.
