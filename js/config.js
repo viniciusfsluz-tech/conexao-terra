@@ -23,5 +23,7 @@ const itensMenu = [
     { texto: "Trabalhos",      href: "trabalhos.html", pagina: "trabalhos" },
     { texto: "O projeto",      href: "sobre.html",     pagina: "sobre" },
     { texto: "Contato",        href: "contato.html",   pagina: "contato" },
-    { texto: "Atividade",      href: "atividade.html", pagina: "atividade" }
+    { texto: "Atividade",      href: "atividade.html", pagina: "atividade" },
+    { texto: "Atividade",      href: "atividade.html", pagina: "atividade" },
+    { texto: "← Portal da 148", href: "https://viniciusfsluz-tech.github.io/portal-148/", pagina: "portal" }
 ];
